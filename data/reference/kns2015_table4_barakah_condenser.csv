@@ -1,0 +1,21 @@
+# Transcribed from: Abdoelatef, M. G., Rezk, O. & Lee, Y. K. (2015). Simplified study for the proposed APR1400
+# condenser performance based on El-Dabaa site, Egypt, with respect to BNPP & Shin Kori NPP.
+# Transactions of the Korean Nuclear Society Autumn Meeting, Gyeongju, Korea, 29-30 October 2015. Table IV.
+# Output of the KINGS NPA full-scope APR1400 simulator using the BARAKAH condenser design, driven by
+# El-Dabaa (Egypt) monthly seawater temperatures. Thermal power basis: 3987 MWth.
+# condenser_mmhga = condenser absolute pressure in mm of mercury (paper labels it "mHgA").
+label,sea_temp_c,power_mwe,condenser_mmhga,t_sat_c,cw_outlet_c,efficiency_pct
+January,18.09,1463.1,28.94,28.3,22.8,36.70
+February,17.24,1463.6,27.70,27.5,22.0,36.71
+March,17.68,1463.4,28.32,27.9,22.4,36.70
+April,18.47,1462.8,29.57,28.6,23.2,36.69
+May,20.59,1461.9,32.96,30.5,25.3,36.67
+June,23.98,1459.8,39.27,33.6,28.7,36.61
+July,27.27,1456.7,46.46,36.7,32.0,36.54
+August,28.60,1454.8,49.84,38.0,33.4,36.49
+September,27.31,1456.4,46.64,36.7,32.1,36.53
+October,25.29,1458.5,42.01,34.8,30.1,36.58
+November,22.10,1460.9,35.67,31.9,26.8,36.64
+December,19.87,1462.2,31.76,29.8,24.6,36.67
+Minimum,16.15,1463.7,26.24,26.6,20.9,36.71
+Maximum,29.57,1453.6,52.37,38.9,34.4,36.46

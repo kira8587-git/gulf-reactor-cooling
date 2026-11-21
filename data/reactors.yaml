@@ -1,0 +1,52 @@
+# Reactor cards: the ~12 numbers that describe a reactor to this model.
+# Every entry: v = value, src = source (or "assumed: reason"). A null value is computed by the model:
+#   m_ex_kg_s = null  -> condenser energy balance, m_ex = Q_c / (x_e h_fg)
+#   a_ex_m2   = null  -> calibrated (model/calibrate.py): on the reactor's monthly output in IAEA PRIS
+#                        (data/reference/pris_2025_monthly.csv) if available, else on a design heat balance.
+# Only the parts of the plant that "see" the sea are needed: the heat to reject, the last turbine stage,
+# and the condenser design.
+
+APR1400:
+  name: {v: "APR1400 (large PWR, 1,400 MWe class)", src: "KEPCO/KHNP design; four units operating at Barakah, UAE (WNA)"}
+  q_th_mw: {v: 4000.0, src: "APR1400 DCD Tier 2 Ch. 10 Rev. 3, Table 10.1-1: rated NSSS power 4,000 MWt (NRC ML18228A657, PDF p. 19)"}
+  p_ref_mw: {v: 1425.3, src: "DCD Fig. 10.1-1 (3 of 4): gross output 1,425,321 kW at 2.6 inHgA, MGR (PDF p. 22)"}
+  pc_ref_kpa: {v: 8.80, src: "DCD Fig. 10.1-1: 2.6 inHgA x 3.386389 kPa/inHg = 8.80 kPa"}
+  m_ex_kg_s: {v: 1176.0, src: "DCD Fig. 10.1-1 (3 of 4): LP exhaust 9,335,945 lb/h"}
+  lp_p_kpa: {v: 1333.0, src: "DCD Fig. 10.1-1 (3 of 4): LP inlet after the reheaters, 193.4 psia"}
+  lp_t_c: {v: 260.0, src: "assumed: not printed in the DCD; below the 284.2 degC main steam that heats the reheaters (DCD Table 10.1-1). E6 tests +-15 K"}
+  eta_lp: {v: 0.87, src: "assumed: typical LP turbine efficiency in wet steam. E6 tests +-0.03"}
+  a_ex_m2: {v: null, src: "calibrated on the monthly output of Barakah-1 to -4 in 2025 (IAEA PRIS); the DCD heat balance gives a cross-check (E1)"}
+  eta_g: {v: 0.985, src: "assumed: large generator incl. mechanical losses"}
+  dtw_des_k: {v: 6.26, src: "ENEC press release 7 Feb 2017: 6,000 m3/min (100 m3/s) of seawater through each condenser; rise = Q_c/(rho c_p V) = 6.26 K"}
+  itd_des_k: {v: 9.4, src: "KNS 2015 Table IV (Barakah condenser design), August row: condenser 38.0 degC - sea 28.6 degC"}
+  load_factor: {v: 0.784, src: "IAEA PRIS reactor pages, Barakah-1 to -4: mean of the lifetime load factors 78.2, 81.6, 83.3 and 70.6 % (print-outs, 2025 data)"}
+
+VVER1000:
+  name: {v: "VVER-1000 (large PWR, 1,000 MWe class)", src: "Rosatom design; operating at Bushehr, Iran (PRIS: VVER V-446)"}
+  q_th_mw: {v: 3000.0, src: "IAEA PRIS, Bushehr-1: thermal capacity 3,000 MW"}
+  p_ref_mw: {v: 1000.0, src: "IAEA PRIS, Bushehr-1: gross capacity 1,000 MWe"}
+  pc_ref_kpa: {v: 8.80, src: "assumed: same design back-pressure as the APR1400"}
+  m_ex_kg_s: {v: null, src: "computed: condenser energy balance"}
+  lp_p_kpa: {v: 1150.0, src: "assumed: typical crossover pressure (absorbed by the calibration of A_ex)"}
+  lp_t_c: {v: 250.0, src: "assumed: typical reheat temperature (absorbed by the calibration of A_ex)"}
+  eta_lp: {v: 0.87, src: "assumed: as APR1400"}
+  a_ex_m2: {v: null, src: "calibrated on Bushehr-1 monthly output 2025 (IAEA PRIS)"}
+  eta_g: {v: 0.985, src: "assumed: as APR1400"}
+  dtw_des_k: {v: 6.26, src: "assumed: Gulf once-through design as Barakah"}
+  itd_des_k: {v: 9.4, src: "assumed: Gulf once-through design as Barakah"}
+  load_factor: {v: 0.602, src: "IAEA PRIS reactor page, Bushehr-1: lifetime load factor 60.2 % (print-out, 2025 data)"}
+
+SMR:
+  name: {v: "Small modular reactor (NuScale-type module, 77 MWe)", src: "NuScale Power Module technical specifications (2026)"}
+  q_th_mw: {v: 250.0, src: "NuScale Power Module specifications: thermal power 250 MWt per module"}
+  p_ref_mw: {v: 77.0, src: "NuScale Power Module specifications: 77 MWe (gross) per module"}
+  pc_ref_kpa: {v: 8.80, src: "assumed: same Gulf design back-pressure"}
+  m_ex_kg_s: {v: null, src: "computed: condenser energy balance"}
+  lp_p_kpa: {v: 3300.0, src: "NuScale Power Module specifications: turbine inlet pressure 33 bar"}
+  lp_t_c: {v: 290.0, src: "assumed: superheated steam from the once-through steam generator (not on the NuScale sheet)"}
+  eta_lp: {v: 0.85, src: "assumed: small turbine"}
+  a_ex_m2: {v: 8.0, src: "assumed: no operating SMR to calibrate on; gives about 148 m/s exhaust velocity at the reference pressure"}
+  eta_g: {v: 0.975, src: "assumed: small generator"}
+  dtw_des_k: {v: 6.26, src: "assumed: Gulf once-through design as Barakah"}
+  itd_des_k: {v: 9.4, src: "assumed: Gulf once-through design as Barakah"}
+  load_factor: {v: 0.90, src: "assumed: design target (NuScale states a capacity factor above 95 %)"}

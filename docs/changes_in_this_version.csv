@@ -1,0 +1,24 @@
+﻿id,change,what_was_done
+C1,Textbook comparison with sources,Report 3.1: table 0.45 (Durmayaz) / 0.44 (no exhaust loss) / 0.24 (DCD) / 0.28 % per degC (Barakah-1 real); intro states both literature values with their bases
+C2,Degree-day formula removed,"Replaced by 'days above T*' (Fig. 4, table 6.2); model/index.py -> model/annual.py"
+C3,5 degC rule box,"Report 3.2, sourced to the ENEC press release (FANR rule; dilution by mixing)"
+C4,Barakah loss as a range,157 GWh/yr per unit (four-unit calibration); range 101-172 (external losses as grid; single units; DCD turbine 110)
+C5,Validation and calibration on real output,PRIS 2025: Barakah-1 to -4 (36 unit-months) RMS 3.1 MW; leave-one-unit-out 3.3 MW; DCD turbine predicts them to 5.0 MW; Bushehr-1 RMS 5.1 MW
+C6,Choke-search bug,Lower bound 0.62 kPa (above the IF97 limit); new test
+D1,Load factors,APR1400: mean PRIS lifetime value of Barakah-1 to -4 (0.784); VVER: Bushehr-1 (0.602); E6 range 0.706-0.849
+D2,Condenser flow,ENEC official press release: 100 m3/s per condenser -> design rise 6.26 K; gap 9.4 K from KNS; effectiveness 0.666
+D3,Intake limit,"Assumed 1.5 x design flow (was 1.3), so the 5 degC rule can be met; marked as assumption"
+D4,SMR card,"NuScale values cited; turbine inlet 3,300 kPa (was 3,450)"
+D5,VVER-1000 card,A_ex calibrated on Bushehr-1 output instead of assumed geometry
+D6,Five report numbers,All report numbers now rounded once from unrounded results; 'at most / below' values rounded up
+D7,Wording,"KNS reference title, El-Dabaa note, 'M plays the role of a Mach number', Stodola 0.004 %, site descriptions, '% of cold-sea output'"
+D8,E5 period,"1996-2025, as the other experiments"
+D9,References,Report lists only data sources and less common formulas; everything else is in this document
+D10,PRIS external losses,"Stated and sourced (IAEA-TECDOC-1393); grid reading shown in E6 (101 GWh/yr, worse fit)"
+D11,Out-of-sample test,Leave one unit out (stronger than leave one month out with four units)
+D12,5 degC rule framing,'The rule is cheap': 1.75-1.79 MW per degC vs ~49 MW warm-sea loss on an average August day
+D13,Novelty wording,'We derive'; exhaust loss acknowledged as known (Spencer et al. 1963)
+D14,Key slide,docs/key_slide.png made by report/make_key_slide.py
+D15,Equations,"Typeset with MathJax (TeX fonts), centred with right-aligned numbers, numbered in reading order (1)-(9)"
+D16,Conclusions,"Rewritten as six self-contained findings, each with its number and section"
+D17,Limitations,Kept but cut to three plain points; robustness section simplified

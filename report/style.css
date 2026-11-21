@@ -1,0 +1,64 @@
+@page { size: A4; }
+body { font-family: "DejaVu Sans", Arial, sans-serif; font-size: 9.8pt; line-height: 1.45; color: #1b1b1b; max-width: none; margin: 0; padding: 0; }
+h1 { font-size: 16pt; line-height: 1.25; margin: 0 0 8pt 0; color: #0f2a44; border-bottom: 2px solid #0f2a44; padding-bottom: 3pt; }
+h1 { margin-top: 18pt; page-break-after: avoid; } h1.first { margin-top: 0; } h1.newpage { page-break-before: always; margin-top: 0; }
+h2 { font-size: 12pt; margin: 14pt 0 5pt; color: #0f2a44; page-break-after: avoid; }
+h3 { font-size: 10.5pt; margin: 10pt 0 4pt; page-break-after: avoid; }
+p, li { orphans: 3; widows: 3; }
+ul, ol { margin: 3pt 0 6pt; padding-left: 18pt; }
+li { margin: 1.5pt 0; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt; font-size: 8.4pt; page-break-inside: avoid; }
+th, td { border: 1px solid #c9d1d9; padding: 3pt 5pt; vertical-align: top; text-align: left; }
+th { background: #e8eef4; color: #0f2a44; }
+tr:nth-child(even) td { background: #fafbfc; }
+img { max-width: 92%; display: block; margin: 6pt auto; page-break-inside: avoid; }
+pre, code { font-family: "DejaVu Sans Mono", Consolas, monospace; font-size: 8pt; }
+pre { background: #f5f7f9; border: 1px solid #dde3e8; padding: 6pt; white-space: pre; overflow: hidden; page-break-inside: avoid; line-height: 1.3; }
+math { font-size: 104%; }
+math[display="block"] { margin: 5pt 0; }
+figure { margin: 4pt 0; page-break-inside: avoid; }
+figcaption { text-align: center; font-size: 8.3pt; color: #555; margin-top: 2pt; }
+
+/* cover */
+.cover { page-break-after: always; padding-top: 55mm; }
+.cover .kicker { font-size: 10pt; letter-spacing: 1.5pt; text-transform: uppercase; color: #3b6e99; margin-bottom: 10pt; }
+.cover .title { font-size: 25pt; line-height: 1.2; font-weight: bold; color: #0f2a44; margin-bottom: 12pt; }
+.cover .subtitle { font-size: 13pt; color: #333; margin-bottom: 30pt; }
+.cover .meta { font-size: 10pt; color: #444; border-top: 2px solid #0f2a44; padding-top: 10pt; line-height: 1.7; }
+.cover .note { margin-top: 40mm; font-size: 8.8pt; color: #555; border: 1px solid #c9d1d9; padding: 8pt 10pt; background: #f6f8fa; }
+
+/* boxes */
+.key { border-left: 4px solid #3b6e99; background: #eef4f9; padding: 5pt 10pt; margin: 8pt 0; page-break-inside: avoid; }
+.warn { border-left: 4px solid #c27c0e; background: #fdf5e6; padding: 5pt 10pt; margin: 8pt 0; page-break-inside: avoid; }
+.key p, .warn p { margin: 3pt 0; }
+.theorem { border: 1.5px solid #0f2a44; background: #f7f9fb; padding: 6pt 10pt; margin: 8pt 0; page-break-inside: avoid; }
+
+/* status chips */
+.chip { display: inline-block; font-size: 7.4pt; font-weight: bold; padding: 0.5pt 5pt; border-radius: 6pt; color: #fff; white-space: nowrap; }
+.done { background: #2e7d32; }
+.part { background: #c27c0e; }
+.todo { background: #b3261e; }
+.hi { color: #b3261e; font-weight: bold; }
+
+.toc ol { padding-left: 16pt; }
+.toc li { margin: 2.5pt 0; }
+.small { font-size: 8.4pt; color: #444; }
+:not(mjx-container) > svg { display: block; margin: 6pt auto; }
+
+.long table { page-break-inside: auto; }
+tr { page-break-inside: avoid; }
+thead { display: table-header-group; }
+.code-sig { font-family: "DejaVu Sans Mono", monospace; font-size: 8.2pt; background: #f2f5f8; border: 1px solid #dde3e8; padding: 1pt 4pt; border-radius: 3pt; }
+.algo { border: 1px solid #c9d1d9; border-left: 4px solid #27864a; background: #f7fbf8; padding: 5pt 10pt; margin: 8pt 0; page-break-inside: avoid; }
+.algo p { margin: 3pt 0; }
+h4 { font-size: 10pt; margin: 9pt 0 3pt; color: #27864a; page-break-after: avoid; }
+
+.fig { page-break-inside: avoid; break-inside: avoid; }
+
+math { font-family: "Latin Modern Math", "STIX Math", serif; }
+mjx-container[jax="SVG"] { font-size: 105%; }
+.eq { margin: 6pt 0; page-break-inside: avoid; break-inside: avoid; }
+.eq > p { display: flex; align-items: center; margin: 0; }
+.eq > p > .math.display, .eq > p > mjx-container { flex: 1 1 auto; text-align: center; margin: 0 !important; }
+.eq .eqn { flex: 0 0 3.2em; text-align: right; color: #222; }
+.theorem .eq { margin: 3pt 0; }

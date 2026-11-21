@@ -1,0 +1,12 @@
+# APR1400 DCD Tier 2, Chapter 10, Rev. 3 (Aug 2018), Figure 10.1-1 (pages 10.1-8 to 10.1-11),
+# US NRC ADAMS ML18228A657. Same figures in Rev. 0 (ML15006A049, ML13281A749).
+# Units as printed: flows lb/hr, power kW, pressure inHgA / psia, temperature degF (1967 ASME steam tables).
+# US reference design: 60 Hz, 1800 rpm, 1 double-flow HP + 3 double-flow LP turbines (6 LP flows),
+# two-stage MSR, turbine-driven feedwater pumps (FP), wet cooling towers. NOT the Barakah (50 Hz, seawater) unit.
+# hp_inlet_lbh = steam to the HP turbine; sg_feedwater_lbh = total steam-generator feedwater flow;
+# lp_inlet_lbh = LP turbine inlet after the MSRs; lp_exhaust_lbh = LP exhaust to the condenser.
+case,condenser_inhga,generator_output_kw,hp_inlet_lbh,sg_feedwater_lbh,lp_inlet_lbh,lp_exhaust_lbh,feed_pump_turbine_kw,final_feedwater_f,hp_inlet_psia,hp_inlet_f,hp_inlet_h_btulb
+VWO,2.60,1485736,18024619,18835515,12147152,9716154,16480,454.7,962.0,539.9,1191.3
+VWO,1.50,1517474,18022503,18835427,12172507,9537166,16499,454.7,962.0,539.9,1191.3
+MGR,2.60,1425321,17166298,17985900,11620650,9335945,15737,450.0,962.0,539.9,1191.3
+MGR,1.50,1459605,17164285,17985900,11645146,9163868,15755,450.0,962.0,539.9,1191.3

@@ -1,0 +1,52 @@
+# Site cards. Sea temperature: NOAA OISST v2.1 daily, 1982-2025, file data/sst/<key>.csv
+# (data/download_sst.py: the two nearest ocean cells of the 0.25-degree grid, averaged).
+sites:
+  kuwait:
+    name: {v: "Az-Zour, Kuwait", src: "representative northern-Gulf coastal site (power-station coast)"}
+    lat: {v: 28.72, src: "approximate coastal point"}
+    lon: {v: 48.38, src: "approximate coastal point"}
+    salinity: {v: 40.0, src: "Ibrahim et al. (2020): 40-41 g/kg over most of the Gulf"}
+  bushehr:
+    name: {v: "Bushehr, Iran", src: "Bushehr NPP (operating, VVER-1000)"}
+    lat: {v: 28.83, src: "plant location (Wikipedia: 28.8296 N)"}
+    lon: {v: 50.89, src: "plant location (Wikipedia: 50.8860 E)"}
+    salinity: {v: 40.0, src: "Ibrahim et al. (2020): 40-41 g/kg over most of the Gulf"}
+  jubail:
+    name: {v: "Jubail, Saudi Arabia", src: "shortlisted Saudi nuclear site, 2013 (WNA)"}
+    lat: {v: 27.02, src: "near Jubail (Wikipedia: 27.00 N)"}
+    lon: {v: 49.66, src: "near Jubail (Wikipedia: 49.65 E)"}
+    salinity: {v: 41.0, src: "Ibrahim et al. (2020): 40-41 g/kg over most of the Gulf"}
+  ras_laffan:
+    name: {v: "Ras Laffan, Qatar", src: "representative central-Gulf coastal site (industrial coast)"}
+    lat: {v: 25.91, src: "near Ras Laffan (Wikipedia: 25.86 N)"}
+    lon: {v: 51.57, src: "near Ras Laffan (Wikipedia: 51.54 E)"}
+    salinity: {v: 42.0, src: "Ibrahim et al. (2020): saltiest water (> 41 g/kg) in the southern Gulf"}
+  saudi_uae_border:
+    name: {v: "Saudi-UAE border coast (Duwaiheen area)", src: "Duwaiheen: site licence for Saudi Arabia's first large plant, March 2023 (WNA)"}
+    lat: {v: 24.25, src: "approximate coastal point"}
+    lon: {v: 51.35, src: "approximate coastal point"}
+    salinity: {v: 42.0, src: "Ibrahim et al. (2020): saltiest water (> 41 g/kg) in the southern Gulf"}
+  barakah:
+    name: {v: "Barakah, UAE", src: "Barakah NPP (operating, 4 x APR1400)"}
+    lat: {v: 23.968, src: "plant location (Wikipedia: 23.9678 N)"}
+    lon: {v: 52.232, src: "plant location (Wikipedia: 52.2317 E)"}
+    salinity: {v: 42.0, src: "Ibrahim et al. (2020): saltiest water (> 41 g/kg) in the southern Gulf"}
+  fujairah:
+    name: {v: "Fujairah, UAE (Gulf of Oman)", src: "outside the Gulf, for comparison"}
+    lat: {v: 25.15, src: "near Fujairah City (Wikipedia: 25.12 N)"}
+    lon: {v: 56.36, src: "near Fujairah City (Wikipedia: 56.33 E)"}
+    salinity: {v: 37.0, src: "assumed: Gulf of Oman surface salinity (small effect)"}
+
+# Rules and money: Barakah's values, applied to every site as a common scenario.
+common:
+  dt_max_k: {v: 5.0, src: "ENEC press release 7 Feb 2017: discharge water not more than 5 degC above the ambient Gulf temperature (FANR regulation)"}
+  t_design_c: {v: 36.5, src: "KNS 2015 p. 4 (citing the FANR safety evaluation report): APR1400 designed for 36.5 degC Gulf water"}
+  t_shutdown_c: {v: 38.5, src: "KNS 2015 p. 4 (citing the FANR safety evaluation report): shut down above 38.5 degC"}
+  price_aed_mwh: {v: 200.0, src: "scenario: value of replacement electricity"}
+  ef_t_mwh: {v: 0.40, src: "IPCC 2006 Vol. 2 Table 2.2: natural gas 56.1 t CO2/TJ x 3.6 GJ/MWh / 0.50 (assumed gas-plant efficiency)"}
+  pump_static_m: {v: 5.0, src: "assumed: intake/outfall head"}
+  pump_friction_m: {v: 10.0, src: "assumed: friction head at design flow"}
+  bypass_head_m: {v: 6.0, src: "assumed: the dilution (bypass) water skips the condenser"}
+  pump_eff: {v: 0.85, src: "assumed: large seawater pumps"}
+  flow_max_factor: {v: 1.5, src: "assumed: total intake up to 1.5 x design condenser flow (Barakah: 150 m3/s; the 5 degC rule needs ~125 m3/s at design). ENEC FAQ 12: larger pumps to increase the water flow"}
+  flow_min_factor: {v: 0.6, src: "assumed: minimum condenser flow 60 % of design"}
