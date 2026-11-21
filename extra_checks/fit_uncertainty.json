@@ -1,0 +1,36 @@
+{
+ "n_points": 36,
+ "fitted_numbers": 5,
+ "degrees_of_freedom": 31,
+ "a_ex_grid_best": 109.0,
+ "rms_mw": 3.0853509253601654,
+ "residual_sd_mw": 3.3248723088474117,
+ "r2_within_unit": 0.9708208615903674,
+ "distinct_months": 12,
+ "resample_unit_months": {
+  "reps": 2000,
+  "a_ex_95": [
+   105.5,
+   112.5
+  ],
+  "a_ex_sd": 1.7846251532184565,
+  "loss_gwh_95": [
+   142.81457309475982,
+   170.4278935342422
+  ]
+ },
+ "resample_calendar_months": {
+  "reps": 2000,
+  "a_ex_95": [
+   101.0,
+   114.0
+  ],
+  "a_ex_sd": 2.990675132808644,
+  "loss_gwh_95": [
+   125.68542111789371,
+   176.43477356955265
+  ]
+ },
+ "loss_at_best_gwh": 156.50490376117702,
+ "loss_per_m2_gwh": 3.9369309611839753
+}

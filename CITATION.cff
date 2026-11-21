@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this model, please cite it as below."
+title: "gulf_heatsink_model: heat-sink losses of steam-cycle reactors in a warm sea"
+type: software
+authors:
+  - family-names: "Thakur"
+    given-names: "Shaunak"
+repository-code: "https://github.com/kira8587-git/gulf-reactor-cooling"
+license: MIT
+version: "1.0"
+date-released: "2026-11-21"
+keywords:
+  - nuclear power
+  - condenser
+  - cooling water
+  - steam turbine
+  - thermodynamics
